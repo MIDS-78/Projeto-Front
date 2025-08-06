@@ -88,7 +88,6 @@
     padding: 1.1rem;
     width: 72%;
     opacity: 0.5;
-    margin-bottom: 1rem;
 }
 
 
@@ -127,7 +126,7 @@ input::placeholder {
     border-radius: 45px;
     padding: 0.6rem;
     width: 80%;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -141,14 +140,33 @@ input::placeholder {
     border-radius: 45px;
     padding: 0.6rem;
     width: 80%;
-    margin-bottom: 4.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .text-ou{
-     color: #023A67;
-     font-family: var(--font-plus);
-     font-size: 14px;
-     font-weight: 100;
+   display: flex;
+   flex-direction: row;
+   width: 80%;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+}
+
+.text-ou p{
+    font-family: var(--font-plus);
+    font-weight: 100;
+    font-size: 14px;
+    justify-self: center;
+    align-self: center;
+}
+
+.linha{
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #023A67;
+    opacity: 0.2;
+    margin-top: 0.3rem;
 }
 
 .btn-joinin{
@@ -159,5 +177,5 @@ input::placeholder {
     padding: 1rem;
     background-color: transparent;
     margin-top: 4rem;
-    margin-bottom: 9rem;
+    margin-bottom: 6rem;
 }
