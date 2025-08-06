@@ -7,11 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => document.head.insertAdjacentHTML("beforeend", data));
 
     // HEADER
-    const headerContainer = document.querySelector("#header-container");
-    if (headerContainer) {
-        fetch(`${basePath}components/header.html`)
+    const headerContainerInicial = document.querySelector("#header-container-inicial");
+    if (headerContainerInicial) {
+        fetch(`${basePath}components/header-inicial.html`)
             .then(res => res.text())
-            .then(data => headerContainer.innerHTML = data);
+            .then(data => headerContainerInicial.innerHTML = data);
+    }
+
+    const headerContainerTelas = document.querySelector("#header-container-telas");
+    if (headerContainerTelas) {
+        fetch(`${basePath}components/header-telas.html`)
+            .then(res => res.text())
+            .then(data => headerContainerTelas.innerHTML = data);
     }
 
     // FOOTER

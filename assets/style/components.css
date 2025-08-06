@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #005691;
+}
+
+.container-header-component{
+    display: flex;
+    align-items: center;
+}
+
+.container-header-component ul{
+    display: flex;
+    gap: 2rem;
+}
+
+.container-header-component ul li{
+    list-style: none;
+}
+
+.container-header-component ul li a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
