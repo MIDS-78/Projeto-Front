@@ -6,38 +6,49 @@
     <link rel="stylesheet" href="../../assets/style/global.css">
 </head>
 <body>
-    
+   
     <!-- Nessa linha o header irá ser inserido automaticamente -->
     <div id="header-container-telas"></div>
 
     <!-- Aqui estará todo o código da página -->
     <main>
+        <div class="container">
         <div class="tela-login">
-            <section class="section-title">
-            <h1>Info<strong>WEG</strong></h1>
-            <h2 >Entrar</h2>
+        <section class="section-title">
+            <h1> <span class="light"> Info</span> <span class="bold"> WEG </span></h1>
+            <h2 >ENTRAR</h2>
         </section>
 
-        <form>
+
+        <form class="formulario">
+            <div class="info-forms">
             <input type="nome" placeholder="Usuário ou Email"><br><br>
-            <input type="senha" placeholder="Senha"> 
+            <input type="senha" placeholder="Senha">
             <p class="esqueceu-senha">Esqueceu sua senha?</p>
-            <button>Entrar</button>
+            <button class="btn-entrar">Entrar</button></div>  
 
-            <p>ou</p>
+            <div class="text-ou">
+                <p>ou</p>
+            </div>
 
-            <button>Entrar com o Joinin</button><br><br>
-            <button>Primeiro acesso? Clique aqui</button>
+            <button class="btn-joinin">Entrar com o Joinin</button><br><br>
+            <button class="btn-acesso">Primeiro acesso? Clique aqui</button>
         </form>
         </div>
-
+    </div>
+</div>
     </main>
 
+
     <!-- Nessa linha o footer irá ser inserido automaticamente -->
-    <div id="footer-container"></div>
+
 
     <script src="../../assets/script/include_components.js"></script>
     <script src="../../assets/script/script.js"></script>
-    
+   
 </body>
 </html>
+
+
+
+
