@@ -1,13 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 body {
     background-color: #ffffff;
+    color: #005691;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+.section-title{
+    color: #005691;
+    margin-top: 5rem;
+}
+
+.section-title h1{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+
+.bold{
+    font-size: 55px;
+    font-weight: 700;
+    font-family: var(--font-kumbh);
+}
+
+
+.light{
+    font-size: 50px;
+    font-weight: 300;
+    opacity: 0.8;
+    font-family: var(--font-kumbh);
+}
+
 
 h1 {
-    display: flex;
-    color: #005691;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
-h2 {
+.bem-vindo {
     display: flex;
-    color: #005691;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1px;
+    margin-top: 60px;
+}
+
+.sair {
+    background-color: #005691;
+    color: #ffffff;
+    border: none;
+    border-radius: 45px;
+    width: 270px;
+    height: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10rem;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
 }
