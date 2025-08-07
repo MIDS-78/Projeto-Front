@@ -1,0 +1,245 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+:root{
+    --cor-primaria: #005691;
+    --font-kumbh: "Kumbh Sans", sans-serif;
+    --font-plus:"Plus Jakarta Sans", sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.tela-login{
+    margin-top: 4rem;
+    width: 80%;
+}
+
+
+
+
+.section-title{
+    color: var(--cor-primaria);
+}
+.section-title h1{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+
+
+
+.bold{
+    font-size: 55px;
+    font-weight: 700;
+    font-family: var(--font-kumbh);
+}
+
+
+
+
+.light{
+    font-size: 50px;
+    font-weight: 300;
+    opacity: 0.8;
+    font-family: var(--font-kumbh);
+}
+
+
+
+
+.section-title h2{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: var(--font-plus);
+    margin-top: 3rem;
+}
+
+
+
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
+
+.info-forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+
+
+
+.info-forms input{
+    border: 1px solid;
+    color: #023A6780;
+    border-radius: 45px;
+    padding: 1.1rem;
+    width: 72%;
+    opacity: 0.5;
+}
+
+
+
+
+input::placeholder {
+    margin: 30px;
+    font-size: var(--font-plus);
+    font-weight: 100;
+}
+
+
+
+
+.esqueceu-senha{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.esqueceu-senha a{
+    color: #023A67;
+    font-weight: 500;
+    font-family: var(--font-plus);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+
+.btn-entrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #005691;
+    border: none;
+    color: white;
+    border-radius: 45px;
+    padding: 0.6rem;
+    width: 80%;
+    margin-bottom: 3rem;
+    font-family: var(--font-plus);
+    font-size: 14px;
+}
+
+
+.btn-entrar a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.btn-acesso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #005691;
+    border: none;
+    color: white;
+    border-radius: 45px;
+    padding: 0.6rem;
+    width: 80%;
+    margin-bottom: 2.5rem;
+    font-size: 14px;
+}
+
+.btn-acesso a{
+    text-decoration: none;
+    color: white;
+    font-family: "Noto Sans Arabic", sans-serif;
+    font-size: 14px;
+}
+
+.btn-acesso a span{
+    font-weight: 700;
+}
+
+
+.text-ou{
+   display: flex;
+   flex-direction: row;
+   width: 80%;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+}
+
+
+.text-ou p{
+    font-family: var(--font-plus);
+    font-weight: 100;
+    font-size: 14px;
+    justify-self: center;
+    align-self: center;
+}
+
+
+.linha{
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #023A67;
+    opacity: 0.2;
+    margin-top: 0.3rem;
+}
+
+
+.btn-joinin{
+    color: #023A67;
+    border: 1px solid;
+    border-radius: 45px;
+    width: 80%;
+    padding: 1rem;
+    background-color: transparent;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    color: #023A67;
+    font-size: 14px;
+    font-family: var(--font-plus);
+}
+
+.btn-joinin a{
+    text-decoration: none;
+    color: #023A67;
+}
+
+
+

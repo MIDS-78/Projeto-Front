@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root{
+    --primary-color: #005691;
+    --font-kumbh-sans: "Kumbh Sans", sans-serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container-header-component{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #CFC8ED;
+}
+
+.foto-de-perfil{
+    width: 50px;
+    height: 50px;
+}
+
+.foto-de-perfil img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.logo-infoweg h3{
+    color: var(--primary-color);
+    font-family: var(--font-kumbh-sans);
+    font-size: 2rem;
+}
+
+.logo-infoweg h3 span{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.icones-navegacao{
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.container-header-component ul{
+    display: flex;
+    gap: 2rem;
+}
+
+.container-header-component ul li{
+    list-style: none;
+}
+
+.container-header-component ul li a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
