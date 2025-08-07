@@ -1,12 +1,18 @@
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 
 *{
     margin: 0;
     padding: 0;
 }
+
+
 
 
 :root{
@@ -21,10 +27,14 @@
 }
 
 
+
+
 .tela-login{
     margin-top: 4rem;
     width: 80%;
 }
+
+
 
 
 .section-title{
@@ -37,29 +47,37 @@
 }
 
 
+
+
 .bold{
-    font-size: 70px;
+    font-size: 55px;
     font-weight: 700;
     font-family: var(--font-kumbh);
 }
 
 
+
+
 .light{
-    font-size: 65px;
+    font-size: 50px;
     font-weight: 300;
     opacity: 0.8;
     font-family: var(--font-kumbh);
 }
 
 
+
+
 .section-title h2{
     display: flex;
     justify-content: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
     font-family: var(--font-plus);
     margin-top: 3rem;
 }
+
+
 
 
 .formulario{
@@ -69,6 +87,8 @@
     align-items: center;
     margin: 0 auto;
 }
+
+
 
 
 .info-forms{
@@ -81,6 +101,8 @@
 }
 
 
+
+
 .info-forms input{
     border: 1px solid;
     color: #023A6780;
@@ -91,6 +113,8 @@
 }
 
 
+
+
 input::placeholder {
     margin: 30px;
     font-size: var(--font-plus);
@@ -98,21 +122,22 @@ input::placeholder {
 }
 
 
+
+
 .esqueceu-senha{
     display: flex;
     justify-content: center;
-    color: #023A67;
     margin-top: 2rem;
-    font-weight: 500;
-    font-family: var(--font-plus);
-    font-size: 13px;
     margin-bottom: 2rem;
 }
 
 
-.esqueceu-senha:hover{
-  color: #396485;
-  text-decoration: underline;
+.esqueceu-senha a{
+    color: #023A67;
+    font-weight: 500;
+    font-family: var(--font-plus);
+    font-size: 13px;
+    text-decoration: none;
 }
 
 
@@ -127,7 +152,17 @@ input::placeholder {
     padding: 0.6rem;
     width: 80%;
     margin-bottom: 3rem;
+    font-family: var(--font-plus);
+    font-size: 14px;
 }
+
+
+.btn-entrar a{
+    text-decoration: none;
+    color: white;
+}
+
+
 
 
 .btn-acesso{
@@ -141,7 +176,20 @@ input::placeholder {
     padding: 0.6rem;
     width: 80%;
     margin-bottom: 2.5rem;
+    font-size: 14px;
 }
+
+.btn-acesso a{
+    text-decoration: none;
+    color: white;
+    font-family: "Noto Sans Arabic", sans-serif;
+    font-size: 14px;
+}
+
+.btn-acesso a span{
+    font-weight: 700;
+}
+
 
 .text-ou{
    display: flex;
@@ -152,6 +200,7 @@ input::placeholder {
    gap: 0.5rem;
 }
 
+
 .text-ou p{
     font-family: var(--font-plus);
     font-weight: 100;
@@ -159,6 +208,7 @@ input::placeholder {
     justify-self: center;
     align-self: center;
 }
+
 
 .linha{
     width: 100%;
@@ -169,6 +219,7 @@ input::placeholder {
     margin-top: 0.3rem;
 }
 
+
 .btn-joinin{
     color: #023A67;
     border: 1px solid;
@@ -178,4 +229,17 @@ input::placeholder {
     background-color: transparent;
     margin-top: 4rem;
     margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    color: #023A67;
+    font-size: 14px;
+    font-family: var(--font-plus);
 }
+
+.btn-joinin a{
+    text-decoration: none;
+    color: #023A67;
+}
+
+
+
