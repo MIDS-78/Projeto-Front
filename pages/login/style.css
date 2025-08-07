@@ -10,16 +10,17 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-
-
 
 :root{
     --cor-primaria: #005691;
     --font-kumbh: "Kumbh Sans", sans-serif;
     --font-plus:"Plus Jakarta Sans", sans-serif;
 }
+
+
+
 .container{
     display: flex;
     justify-content: center;
@@ -27,13 +28,10 @@
 }
 
 
-
-
 .tela-login{
     margin-top: 4rem;
-    width: 80%;
+    width: 85%;
 }
-
 
 
 
@@ -102,27 +100,21 @@
 
 
 
-
 .info-forms input{
     border: 1px solid;
     color: #023A6780;
     border-radius: 45px;
-    padding: 1.1rem;
-    width: 72%;
-    opacity: 0.5;
+    width: 100%;
+    opacity: 0.6;
+    padding: 1rem 0rem;
+    max-width: 100%;
+    padding-left: 1rem;
 }
 
-
-
-
 input::placeholder {
-    margin: 30px;
     font-size: var(--font-plus);
     font-weight: 100;
 }
-
-
-
 
 .esqueceu-senha{
     display: flex;
@@ -130,6 +122,7 @@ input::placeholder {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
 
 
 .esqueceu-senha a{
@@ -141,6 +134,13 @@ input::placeholder {
 }
 
 
+
+.class-btn-entrar{
+    width: 100%;
+}
+
+
+
 .btn-entrar{
     display: flex;
     justify-content: center;
@@ -150,18 +150,18 @@ input::placeholder {
     color: white;
     border-radius: 45px;
     padding: 0.6rem;
-    width: 80%;
     margin-bottom: 3rem;
     font-family: var(--font-plus);
     font-size: 14px;
-}
-
-
-.btn-entrar a{
     text-decoration: none;
-    color: white;
 }
 
+
+
+
+.class-btn-acesso{
+    width: 100%;
+}
 
 
 
@@ -174,19 +174,14 @@ input::placeholder {
     color: white;
     border-radius: 45px;
     padding: 0.6rem;
-    width: 80%;
     margin-bottom: 2.5rem;
     font-size: 14px;
-}
-
-.btn-acesso a{
     text-decoration: none;
-    color: white;
     font-family: "Noto Sans Arabic", sans-serif;
-    font-size: 14px;
+    gap: 0.3rem;
 }
 
-.btn-acesso a span{
+.class-btn-acesso a span{
     font-weight: 700;
 }
 
@@ -194,7 +189,7 @@ input::placeholder {
 .text-ou{
    display: flex;
    flex-direction: row;
-   width: 80%;
+   width: 100%;
    align-items: center;
    justify-content: center;
    gap: 0.5rem;
@@ -219,12 +214,14 @@ input::placeholder {
     margin-top: 0.3rem;
 }
 
+.class-btn-joinin{
+    width: 100%;
+}
 
 .btn-joinin{
     color: #023A67;
     border: 1px solid;
     border-radius: 45px;
-    width: 80%;
     padding: 1rem;
     background-color: transparent;
     margin-top: 4rem;
@@ -234,11 +231,7 @@ input::placeholder {
     color: #023A67;
     font-size: 14px;
     font-family: var(--font-plus);
-}
-
-.btn-joinin a{
     text-decoration: none;
-    color: #023A67;
 }
 
 
