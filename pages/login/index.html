@@ -22,13 +22,16 @@
 
             <form class="formulario">
                 <div class="info-forms">
-                    <input type="nome" placeholder="Usuário ou Email"><br><br>
-                    <input type="password" placeholder="Senha">
+                    <input type="nome" name="usuario" placeholder="Usuário ou Email" required><br><br>
+                    <input type="password" name="password" placeholder="Senha"  required>
+
+                    <p id="usuario-incorreto">Usuario ou senha incorretos! Tente novamente</p>
+
                      <div class="esqueceu-senha">
                         <a href="../esqueci_senha/">Esqueci minha senha!</a>
                     </div>
                     <div class="class-btn-entrar">
-                        <a href="../notificacao/" class="btn-entrar">Entrar</a>
+                        <button class="btn-entrar">Entrar</button>
                     </div>
 
 
