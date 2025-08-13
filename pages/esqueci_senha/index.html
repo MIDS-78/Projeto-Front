@@ -27,19 +27,20 @@
                         <p>Insira o código que foi enviado ao seu email:</p>
                         <h4>exemplo@gmail.com</h4>
                     </div>
-                    
-                    <div class="codigo-numeros">
-                        <input type="text" id="codigo" placeholder="Insira o código aqui">
-                    </div>
+                    <form action="get" id="formulario">
+                        <div class="codigo-numeros">
+                            <input type="text" id="codigo" placeholder="Insira o código aqui" required>
+                        </div>
 
-                    <div class="nao-recebeu-codigo">
-                        <p>Não recebeu o código? <span><a href="#">Clique aqui!</a></span></p>
-                        <p id="tempo-codigo">00:02:24</p>
-                    </div>
+                        <div class="nao-recebeu-codigo">
+                            <p>Não recebeu o código? <span><a href="#">Clique aqui!</a></span></p>
+                            <p id="timer">30:00</p>
+                        </div>
 
-                    <div class="botao-prosseguir">
-                        <a href="./alterar_senha_apos_esquecer.html">Prosseguir</a>
-                    </div>
+                        <div class="botao-prosseguir">
+                            <button>Prosseguir</button>
+                        </div>
+                    </form>
 
                 </div>
 
@@ -53,6 +54,7 @@
 
     <script src="../../assets/script/include_components.js"></script>
     <script src="../../assets/script/script.js"></script>
+    <script src="./script.js"></script>
     
 </body>
 </html>

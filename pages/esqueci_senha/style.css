@@ -125,7 +125,7 @@
     font-size: 1rem;
 }
 
-#tempo-codigo{
+#timer{
     font-size: 1rem;
 
 }
@@ -136,13 +136,16 @@
     display: flex;
 }
 
-.botao-prosseguir a{
+.botao-prosseguir button{
     background-color: var(--cor-primaria);
     color: white;
     text-decoration: none;
     border-radius: 40px;
     width: 100%;
     padding: 0.5rem 0rem;
+    border: 0;
+    font-size: 1rem;
+    font-family: var(--font-plus);
 }
 
 .algo-errado{
@@ -158,6 +161,14 @@
     color: var(--cor-primaria);
     font-weight: 600;
     font-family: var(--font-plus);
+}
+
+#formulario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
