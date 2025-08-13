@@ -103,7 +103,7 @@ form{
     font-size: 11px;
 }
 
-.formulario a{
+.formulario button{
    display: flex;
    text-decoration: none;
     justify-content: center;
