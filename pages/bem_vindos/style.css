@@ -35,10 +35,19 @@ body {
 
 h1 {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-size: 30px;
     font-style: normal;
     font-weight: 800;
+    line-height: normal;
+}
+
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
     line-height: normal;
 }
 
@@ -51,18 +60,17 @@ h1 {
     margin-top: 60px;
 }
 
-.sair {
+#links{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+#links a{
     background-color: #005691;
-    color: #ffffff;
-    border: none;
-    border-radius: 45px;
-    width: 270px;
-    height: 36px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10rem;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 550;
-    line-height: normal;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 18px;
 }

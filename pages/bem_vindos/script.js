@@ -7,13 +7,7 @@ window.addEventListener("DOMContentLoaded", function() {
   // Adiciona links abaixo do nome
   const divBemVindo = document.querySelector(".bem-vindo");
   if (divBemVindo) {
-    const linksDiv = document.createElement("div");
-    linksDiv.style.marginTop = "2rem";
-    linksDiv.innerHTML = `
-      <a href="../../index.html" style="color:#005691; font-weight:600; margin-right:2rem; text-decoration:none; font-size:18px;">Página Inicial</a>
-      <a href="../login/index.html" id="logout-link" style="color:#005691; font-weight:600; text-decoration:none; font-size:18px;">Sair</a>
-    `;
-    divBemVindo.appendChild(linksDiv);
+    const links = document.getElementById("links");
   }
 
   // Botão sair remove token e nome
