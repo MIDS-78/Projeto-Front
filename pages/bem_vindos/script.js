@@ -1,7 +1,7 @@
 // Mostra o nome do usuário, link para página inicial e botão de sair
 window.addEventListener("DOMContentLoaded", function() {
   const nome = localStorage.getItem("nome_usuario") || "Usuário";
-  const nomeEl = document.querySelector(".bem-vindo h1:nth-child(2)");
+  const nomeEl = document.querySelector(".bem-vindo h2:nth-child(2)");
   if (nomeEl) nomeEl.textContent = nome + "!";
 
   // Adiciona links abaixo do nome
