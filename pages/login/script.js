@@ -1,32 +1,38 @@
-document.querySelector("forms-login").addEventListener("entrar", async (e) => {
-    e.preventDefault();
+document.getElementById("forms-login").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-    const username = document.querySelector("#usuario").value;
-    const password = document.querySelector("#senha").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("senha").value;
 
-    try {
-        const res = await fetch("/api/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, password }),
-            credentials: "include" // se for usar cookies
-        });
+  try {
+    const response = await fetch("https://infoweg-backend.onrender.com/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: email,      // precisa ser "email"
+        password: password // precisa ser "password"
+      })
+    });
 
-        const data = await res.json();
+    const result = await response.json();
+    console.log("Resposta do back:", result);
 
-        if (res.ok && data.success) {
-            // Salva token no localStorage (se usar JWT)
-            if (data.token) {
-                localStorage.setItem("token", data.token);
-            }
+    if (response.ok && result.status === "success") {
+      alert("Login realizado com sucesso!");
 
-            // Redireciona pra tela principal
-            window.location.href = "/index.html";
-        } else {
-            document.querySelector("#usuario-incorreto").style.display = "block";
-        }
-    } catch (err) {
-        console.error("Erro no login:", err);
-        alert("Erro ao conectar com o servidor");
+      const token = result.data?.jwtTokenDto?.token;
+      if (token) {
+        localStorage.setItem("token", token);
+      }
+
+      window.location.href = "/home/"; 
+    } else {
+      document.getElementById("usuario-incorreto").style.display = "block";
     }
+  } catch (err) {
+    console.error("Erro de conexão:", err);
+    document.getElementById("usuario-incorreto").style.display = "block";
+  }
 });
