@@ -40,6 +40,26 @@ senhaInput?.addEventListener("blur", function() {
   capsWarning.style.display = "none";
 });
 
+function showSuccessCard(message) {
+  let card = document.createElement("div");
+  card.id = "login-success-card";
+  card.innerHTML = `
+    <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;z-index:9999;background:rgba(0,86,145,0.08);">
+      <div style="background:#fff;border-radius:20px;box-shadow:0 4px 24px rgba(0,86,145,0.15);padding:2.5rem 2rem;display:flex;flex-direction:column;align-items:center;max-width:350px;">
+        <svg width='48' height='48' fill='none' viewBox='0 0 24 24' stroke='#005691' stroke-width='2'><circle cx='12' cy='12' r='10' stroke='#005691' stroke-width='2'/><path d='M8 12l2 2 4-4' stroke='#005691' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>
+        <h2 style='color:#005691;font-family:var(--font-kumbh, "Kumbh Sans", sans-serif);margin:1rem 0 0.5rem 0;'>Sucesso!</h2>
+        <p style='color:#023A67;font-family:var(--font-plus, "Plus Jakarta Sans", sans-serif);font-size:1.1rem;text-align:center;margin-bottom:1.5rem;'>${message}</p>
+        <button id='card-ok-btn' style='background:#005691;color:#fff;border:none;border-radius:45px;padding:0.7rem 2.5rem;font-size:1rem;font-family:var(--font-plus, "Plus Jakarta Sans", sans-serif);cursor:pointer;'>OK</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(card);
+  document.getElementById('card-ok-btn').onclick = function() {
+    card.remove();
+    window.location.href = "../bem_vindos/index.html";
+  };
+}
+
 let isLoading = false;
 document.getElementById("forms-login").addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -73,8 +93,7 @@ document.getElementById("forms-login").addEventListener("submit", async function
         localStorage.setItem("token", token);
         localStorage.setItem("nome_usuario", nome);
       }
-      alert(result.message || "Login realizado com sucesso!");
-      window.location.href = "../bem_vindos/index.html";
+      showSuccessCard(result.message || "Login realizado com sucesso!");
     } else {
       usuarioIncorreto.style.display = "block";
       usuarioIncorreto.textContent = result.message || "Usuário ou senha incorretos.";
