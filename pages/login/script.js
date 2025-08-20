@@ -1,5 +1,21 @@
+const btnEntrar = document.getElementById("entrar");
+const loadingSpinner = document.getElementById("loading-spinner");
+const usuarioIncorreto = document.getElementById("usuario-incorreto");
+
+// Oculta mensagem de erro ao digitar
+["email", "senha"].forEach(id => {
+  document.getElementById(id).addEventListener("input", () => {
+    usuarioIncorreto.style.display = "none";
+  });
+});
+
+let isLoading = false;
 document.getElementById("forms-login").addEventListener("submit", async function (e) {
   e.preventDefault();
+  if (isLoading) return; // Bloqueia múltiplos envios
+  isLoading = true;
+  btnEntrar.disabled = true;
+  loadingSpinner.style.display = "flex";
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("senha").value;
@@ -27,12 +43,16 @@ document.getElementById("forms-login").addEventListener("submit", async function
       alert(result.message || "Login realizado com sucesso!");
       window.location.href = "../../index.html";
     } else {
-      document.getElementById("usuario-incorreto").style.display = "block";
-      document.getElementById("usuario-incorreto").textContent = result.message || "Usuário ou senha incorretos.";
+      usuarioIncorreto.style.display = "block";
+      usuarioIncorreto.textContent = result.message || "Usuário ou senha incorretos.";
     }
   } catch (err) {
     console.error("Erro de conexão:", err);
-    document.getElementById("usuario-incorreto").style.display = "block";
-    document.getElementById("usuario-incorreto").textContent = "Erro de conexão. Tente novamente.";
+    usuarioIncorreto.style.display = "block";
+    usuarioIncorreto.textContent = "Erro de conexão. Tente novamente.";
+  } finally {
+    isLoading = false;
+    btnEntrar.disabled = false;
+    loadingSpinner.style.display = "none";
   }
 });
