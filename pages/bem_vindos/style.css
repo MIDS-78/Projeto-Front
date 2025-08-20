@@ -77,4 +77,9 @@ h2 {
     border-radius: 8px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.425);
     border: 0;
+    width: 200px;
+}
+
+#logout-link{
+    background-color: rgb(219, 49, 49);
 }
