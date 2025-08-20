@@ -25,7 +25,7 @@ document.getElementById("forms-login").addEventListener("submit", async function
         localStorage.setItem("token", token);
       }
       alert(result.message || "Login realizado com sucesso!");
-      window.location.href = "/home/";
+      window.location.href = "../../index.html";
     } else {
       document.getElementById("usuario-incorreto").style.display = "block";
       document.getElementById("usuario-incorreto").textContent = result.message || "Usuário ou senha incorretos.";
