@@ -9,6 +9,34 @@ const usuarioIncorreto = document.getElementById("usuario-incorreto");
   });
 });
 
+// Olhinho para mostrar/ocultar senha
+const senhaInput = document.getElementById("senha");
+const togglePassword = document.getElementById("toggle-password");
+if (togglePassword && senhaInput) {
+  togglePassword.addEventListener("click", function() {
+    if (senhaInput.type === "password") {
+      senhaInput.type = "text";
+      togglePassword.textContent = "🙈";
+    } else {
+      senhaInput.type = "password";
+      togglePassword.textContent = "👁️";
+    }
+  });
+}
+
+// Caps Lock warning
+const capsWarning = document.getElementById("capslock-warning");
+senhaInput?.addEventListener("keyup", function(e) {
+  if (e.getModifierState && e.getModifierState("CapsLock")) {
+    capsWarning.style.display = "block";
+  } else {
+    capsWarning.style.display = "none";
+  }
+});
+senhaInput?.addEventListener("blur", function() {
+  capsWarning.style.display = "none";
+});
+
 let isLoading = false;
 document.getElementById("forms-login").addEventListener("submit", async function (e) {
   e.preventDefault();
