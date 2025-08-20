@@ -49,6 +49,14 @@
     display: none;
 }
 
+#capslock-warning{
+    font-family: var(--font-plus);
+    color: red;
+    margin-top: 0.5rem;
+    font-size: 14px;
+    display: none;
+}
+
 
 
 .bold{
