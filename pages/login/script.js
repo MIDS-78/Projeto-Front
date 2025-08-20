@@ -37,11 +37,13 @@ document.getElementById("forms-login").addEventListener("submit", async function
 
     if (response.ok && result.status === "success") {
       const token = result.data?.jwtTokenDto?.token;
+      const nome = result.data?.usuario?.nome || email;
       if (token) {
         localStorage.setItem("token", token);
+        localStorage.setItem("nome_usuario", nome);
       }
       alert(result.message || "Login realizado com sucesso!");
-      window.location.href = "../../index.html";
+      window.location.href = "../bem_vindos/index.html";
     } else {
       usuarioIncorreto.style.display = "block";
       usuarioIncorreto.textContent = result.message || "Usuário ou senha incorretos.";
