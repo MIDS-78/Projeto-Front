@@ -11,8 +11,8 @@ document.getElementById("forms-login").addEventListener("submit", async function
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        email: email,      // precisa ser "email"
-        password: password // precisa ser "password"
+        email: email,
+        password: password
       })
     });
 
@@ -20,19 +20,19 @@ document.getElementById("forms-login").addEventListener("submit", async function
     console.log("Resposta do back:", result);
 
     if (response.ok && result.status === "success") {
-      alert("Login realizado com sucesso!");
-
       const token = result.data?.jwtTokenDto?.token;
       if (token) {
         localStorage.setItem("token", token);
       }
-
-      window.location.href = "/home/"; 
+      alert(result.message || "Login realizado com sucesso!");
+      window.location.href = "/home/";
     } else {
       document.getElementById("usuario-incorreto").style.display = "block";
+      document.getElementById("usuario-incorreto").textContent = result.message || "Usuário ou senha incorretos.";
     }
   } catch (err) {
     console.error("Erro de conexão:", err);
     document.getElementById("usuario-incorreto").style.display = "block";
+    document.getElementById("usuario-incorreto").textContent = "Erro de conexão. Tente novamente.";
   }
 });
