@@ -65,6 +65,18 @@ body {
     font-family: var(--font-noto);
     font-weight: 700;
     letter-spacing: 0.5px;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    margin: 1.2rem auto 0 auto;
+    width: 90%;
+    height: 3px;
+    background: #005691;
+    border-radius: 2px;
+    opacity: 0.85;
 }
 
 .search-box {
