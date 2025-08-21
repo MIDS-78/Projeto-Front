@@ -88,12 +88,12 @@ document.getElementById("forms-login").addEventListener("submit", async function
 
     if (response.ok && result.status === "success") {
       const token = result.data?.jwtTokenDto?.token;
-      const username = result.data?.usuario?.username || username;
-      const email = result.data?.usuario?.email || email;
+      const username = result.data?.usuario?.username || document.getElementById("email").value;
+      const emailUsuario = result.data?.usuario?.email || document.getElementById("email").value;
       if (token) {
         localStorage.setItem("token", token);
         localStorage.setItem("username", username);
-        localStorage.setItem("email", email);
+        localStorage.setItem("email", emailUsuario);
       }
       showSuccessCard(result.message || "Login realizado com sucesso!");
     } else {
