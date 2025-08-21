@@ -53,7 +53,8 @@ body {
 }
 
 .logo {
-    height: 32px;
+    height: 38px;
+    max-width: 120px;
 }
 
 .title {
@@ -130,6 +131,11 @@ body {
     margin-top: 1.5rem;
     width: 100%;
     padding: 0 0.5rem;
+    border-top: 1.5px solid #e3eaf2;
+}
+
+.notification-section:first-of-type {
+    border-top: none;
 }
 
 .notification-section h2 {
@@ -258,20 +264,90 @@ body {
 
 @media screen and (max-width: 600px) {
     .container {
+        max-width: 100vw;
+        min-width: 100vw;
         border-radius: 0;
         box-shadow: none;
+        padding-bottom: 0.5rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+    }
+    .header {
+        padding: 0.5rem 0.3rem 0 0.3rem;
+    }
+    .icon-back {
+        width: 28px;
+        height: 28px;
+    }
+    .logo {
+        height: 30px;
+        max-width: 90px;
+    }
+    .title {
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    .search-box {
+        padding: 0.2rem 0.3rem 0.5rem 0.3rem;
+        margin: 0;
+    }
+    .search-box input {
+        width: 100%;
+        max-width: 150px;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+        border-radius: 16px;
+    }
+    .filter {
+        padding-left: 0.3rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.7rem;
+    }
+    .btn-filter {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+    }
+    .notification-section {
+        padding: 0 0.5rem;
     }
     .notification {
         flex-direction: column;
         align-items: stretch;
-        padding: 0.8rem 0.3rem;
+        padding: 0.7rem 0.1rem 0.7rem 0.3rem !important;
+        width: 100%;
+        min-height: 60px;
+        font-size: 0.95rem;
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
     }
-    .notification-section {
-        padding: 0 0.1rem;
+    .notification-info h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.15rem;
+    }
+    .notification-info p {
+        font-size: 0.75rem;
+        margin-bottom: 0.08rem;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90vw;
+    }
+    .notification-info span, .status {
+        font-size: 0.7rem;
     }
 }
 
-/* --- Responsividade aprimorada para web e mobile --- */
+@media screen and (max-width: 400px) {
+    .search-box input {
+        max-width: 140px;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+    }
+    .notification {
+        min-height: 70px;
+        font-size: 0.98rem;
+    }
+}
 
 @media screen and (max-width: 900px) {
     .container {
@@ -296,39 +372,6 @@ body {
     .notification {
         width: 99%;
         padding: 0.7rem 0.2rem 0.7rem 0.5rem;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .container {
-        max-width: 100vw;
-        min-width: 100vw;
-        border-radius: 0;
-        box-shadow: none;
-        padding-bottom: 1rem;
-    }
-    .header {
-        padding: 1rem 0.5rem 0 0.5rem;
-    }
-    .title {
-        font-size: 1.2rem;
-        margin: 1.2rem 0 1rem 0;
-    }
-    .search-box input {
-        font-size: 0.98rem;
-        padding: 0.7rem 0.7rem;
-    }
-    .notification-section {
-        padding: 0 0.1rem;
-    }
-    .notification {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0.7rem 0.1rem;
-        width: 100%;
-    }
-    .notification-info h3, .notification-info p {
-        font-size: 0.98rem;
     }
 }
 
