@@ -89,9 +89,11 @@ document.getElementById("forms-login").addEventListener("submit", async function
     if (response.ok && result.status === "success") {
       const token = result.data?.jwtTokenDto?.token;
       const nome = result.data?.usuario?.nome || email;
+      const emailUsuario = result.data?.usuario?.email || email;
       if (token) {
         localStorage.setItem("token", token);
         localStorage.setItem("nome_usuario", nome);
+        localStorage.setItem("email_usuario", emailUsuario);
       }
       showSuccessCard(result.message || "Login realizado com sucesso!");
     } else {
