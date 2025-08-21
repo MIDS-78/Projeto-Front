@@ -4,6 +4,6 @@ window.addEventListener("DOMContentLoaded", function() {
   const email = localStorage.getItem("email") || "aluno@gmail.com";
   const nomeEl = document.querySelector(".nome-email h1");
   const emailEl = document.querySelector(".nome-email p");
-  if (nomeEl) nomeEl.textContent = nome;
-  if (emailEl) emailEl.textContent = email;
+  if (nomeEl) nomeEl.textContent = `Nome: ${nome}`;
+  if (emailEl) emailEl.textContent = `Email: ${email}`;
 });
