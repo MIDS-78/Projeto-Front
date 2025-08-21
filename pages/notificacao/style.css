@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-primaria: #005691;
+    --font-noto: "Noto Sans Arabic", sans-serif;
+}
+
+.titulo-notificacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+
+.search-box input{
+    border: 1px solid #AAAAAA;
+    border-radius: 32px;
+    padding: 0.5rem;
+    width: 80%;
+    margin-left: 2rem;
+}
+
+
+.notification h3{
+    color: var(--cor-primaria);
+    font-family: var(--font-noto);  
+    font-weight: 700;
+    font-size: 1.5rem;
+    
+}
+
+.notification p{
+    color: #023A67;
+}
+.notification {
+    width: 80%;
+    
+}
+
+.dias h2{
+    color : var(--cor-primaria);
+}
+
+.notification-info span {
+    font-size: 0.8rem;
+    color: #888888;
+    margin-right: 0.5rem;
+}
+
+.status {
+    color: #888888;
+    font-weight: 400;
+}
+
+/* Seções de notificação */
+.notification-section {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+/* Estilo do botão de filtro */
+.btn-filter {
+    background-color: #E1ECF7;
+    color: var(--cor-primaria);
+    border: none;
+    border-radius: 24px;
+    padding: 0.4rem 1.5rem;
+    font-size: 0.85rem;
+    font-family: var(--font-noto);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-filter:hover {
+    background-color: #cce2f4;
+}
+
+/* Cabeçalho com logo e ícone voltar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.icon-back {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 32px;
+}
+
+/* Título da página */
+.title {
+    font-size: 1.6rem;
+    color: var(--cor-primaria);
+    font-family: var(--font-noto);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo responsivo para telas menores */
+@media screen and (max-width: 480px) {
+    .search-box input {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .notification {
+        width: 90%;
+    }
+
+    .btn-filter {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .notification-section {
+        padding: 0 1rem;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+}
