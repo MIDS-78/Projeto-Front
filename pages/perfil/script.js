@@ -6,4 +6,16 @@ window.addEventListener("DOMContentLoaded", function() {
   if (nomeEl) nomeEl.textContent = nome;
   if (emailEl) emailEl.textContent = nome;
 
+  // Botão sair remove token e nome
+  document.querySelector("#logout-link")?.addEventListener("click", function(e) {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+  });
+
+  // Botão sair antigo também faz logout
+  document.querySelector(".sair")?.addEventListener("click", function() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    window.location.href = "../login/index.html";
+  });
 });
