@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../assets/style/components.css">
+    <link rel="stylesheet" href="../../assets/style/global.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="esquerda">
+                <div class="icon-voltar"><a href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#005691" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></a></div>
+    
+                <div class="titulo">
+                        <h3>Cadastrar Informativo</h3>
+                </div>
+            </div>
+
+            <div class="logo-infoweg">
+                <h3><span>info</span>WEG</h3>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-cadastro">
+            <form action="" method="POST" id="formularioCadastro">
+                <div class="inputTitulo">
+                    <input type="text" name="titulo" id="titulo" placeholder="Título do Informativo" required>
+                </div>
+
+                <div class="inputImagem">
+                    <label for="imagem" id="imagemLabel">Inserir imagem</label>
+                    <input type="file" name="imagem" id="imagem" accept="image/*">
+                    <span class="file-name" id="fileName"></span>
+                </div>
+
+                <div class="inputDescricaoEOutros">
+                    <textarea name="descricao" id="descricao" placeholder="Descrição do Informativo"></textarea>
+
+                    <select name="tipoInformativo" id="tipoInformativo">
+                        <option value="" disabled selected>Tipo de Informativo</option>
+                        <option value="Geral">Geral</option>
+                        <option value="Recado">Recado</option>
+                        <option value="Orientacao">Orientação</option>
+                        <option value="BuscarCracha">Buscar Crachá</option>
+                        <option value="AchadosEPerdidos">Achados e Perdidos</option>
+                        <option value="segundaRefeicaoOuVale">Vale - Segunda Refeição</option>
+                        <option value="ComparecerCoordenacao">Comparecer a Coordenação</option>
+                    </select>
+
+                    <select name="destinatarios" id="destinatarios">
+                        <option value="" disabled selected>Selecionar Destinatários</option>
+                        <option value="Todas as Turmas">Todas as Turmas</option>
+                        <option value="MIDS76">MIDS 76</option>
+                        <option value="MIDS77">MIDS 77</option>
+                        <option value="MIDS78">MIDS 78</option>
+                        <option value="MIDS79">MIDS 79</option>
+                        <option value="MIDS80">MIDS 80</option>
+                        <option value="MIDS81">MIDS 81</option>
+                    </select>
+
+                    <div class="inputImportante">
+                        <input type="checkbox" name="importante" id="importante">
+                        <label for="importante">Destacar como importante</label>
+                    </div>
+
+                    <button type="submit" id="btnCadastrar" disabled>Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+
+    <script src="../../assets/script/include_components.js"></script>
+    <script src="../../assets/script/config.js"></script>
+    <script src="../../assets/script/script.js"></script>
+    <script src="../../assets/script/auth_check.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
