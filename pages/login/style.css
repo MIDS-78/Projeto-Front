@@ -167,6 +167,12 @@ input::placeholder {
     font-size: 14px;
     text-decoration: none;
     width: 100%;
+    transition: all 0.5s ease;
+}
+
+.btn-entrar:hover{
+    background-color: #023A67;
+    cursor: pointer;
 }
 
 
