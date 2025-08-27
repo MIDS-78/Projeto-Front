@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resetando estilos extras e removendo margens desnecessárias */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #005691;
+    --cor-secundaria: #f7fbfd;
+    --cor-destaque: #ffb800;
+    --font-kumbh: "Kumbh Sans", sans-serif;
+    --font-plus: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    background: var(--cor-secundaria);
+    font-family: var(--font-plus);
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,86,145,0.07);
+}
+
+.titulo h3 {
+    font-family: var(--font-plus);
+    font-size: 14px;
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+.logo-infoweg h3 {
+    font-family: var(--font-plus);
+    font-size: 1.3rem;
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+.logo-infoweg span {
+    font-weight: 800;
+}
+
+.container-cadastro {
+    max-width: 430px;
+    margin: 2.5rem auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,86,145,0.10);
+    padding: 2.5rem 2rem;
+}
+
+#formularioCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputTitulo input {
+    border: none;
+    border-bottom: 2px solid var(--cor-primaria);
+    font-family: var(--font-plus);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 0.5rem;
+    background: transparent;
+    color: #222;
+    text-align: center;
+    transition: border-color 0.2s;
+}
+.inputTitulo input:focus {
+    outline: none;
+    border-color: var(--cor-destaque);
+}
+.inputTitulo input::placeholder {
+    color: #b3cbe0;
+    font-weight: 500;
+}
+
+.inputImagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputImagem input[type="file"] {
+    display: none;
+}
+.inputImagem label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--cor-primaria);
+    color: #fff;
+    font-family: var(--font-plus);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.inputImagem label:hover {
+    background: var(--cor-destaque);
+    color: #222;
+}
+.inputImagem .file-name {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--cor-primaria);
+    font-family: var(--font-plus);
+}
+
+.inputDescricaoEOutros {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#formularioCadastro textarea {
+    border: 1px solid #b3cbe0;
+    border-radius: 8px;
+    font-family: var(--font-plus);
+    font-size: 1rem;
+    color: #333;
+    background: var(--cor-secundaria);
+    min-height: 80px;
+    resize: vertical;
+    padding: 0.7rem;
+}
+
+#formularioCadastro select {
+    border: 1px solid #b3cbe0;
+    border-radius: 8px;
+    font-family: var(--font-plus);
+    font-size: 1rem;
+    color: #333;
+    background: var(--cor-secundaria);
+    padding: 0.7rem;
+}
+
+.inputImportante {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.inputImportante label {
+    font-family: var(--font-plus);
+    font-size: 1rem;
+    color: var(--cor-primaria);
+    font-weight: 600;
+}
+
+#btnCadastrar {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--cor-primaria);
+    color: #fff;
+    font-family: var(--font-plus);
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 0.6;
+}
+#btnCadastrar:enabled {
+    opacity: 1;
+    background: var(--cor-primaria);
+}
+#btnCadastrar:disabled {
+    cursor: not-allowed;
+    background: #b3cbe0;
+}
