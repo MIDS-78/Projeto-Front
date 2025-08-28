@@ -2,19 +2,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-#linkTelaInicial{
-    font-size: 18px;
-    color: #005691;
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cor-primaria: #005691;
+    --font-kumbh: "Kumbh Sans", sans-serif;
+    --font-plus:"Plus Jakarta Sans", sans-serif;
+}
+
+
+.header{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cor-primaria);
+}
+
+.titulo-weg h1{
+    color: var(--cor-primaria);
+}
+
+.bold{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--font-kumbh);
+}
+
+
+.light{
+    font-size: 25px;
+    font-weight: 300;
+    font-family: var(--font-kumbh);
+}
+
+
+.post{
+    padding-top: 1rem;
+    font-family: var(--font-plus);
+}
+
+.post .nome-user{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--cor-primaria);
     font-weight: 600;
-    font-family: "Kumbh Sans", sans-serif;
-    margin-top: 1rem;
+    margin: 8px;
 }
 
-#h1PaginaInicialTeste{
-    margin-top: 2rem;
-    font-family: "Kumbh Sans", sans-serif;
+.post .card-informativo .conteudo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem;
 }
 
-main{
-    text-align: center; 
+.post .card-informativo img{
+    width: 100%;
+    height: auto;
+}
+
+.post .hora-vermais{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5rem;
+    color: gray;
+}
+
+.hora-vermais a{
+    text-decoration: none;
+    color: gray;
+}
+
+.btn-fixo-add {
+  position: fixed;
+  right: 28px;
+  bottom: 36px;
+  width: 60px;
+  height: 60px;
+  background: #005691;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(0,86,145,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: background 0.2s;
+}
+.btn-fixo-add:hover {
+  background: #023A67;
+}
+.btn-fixo-add svg {
+  display: block;
 }
