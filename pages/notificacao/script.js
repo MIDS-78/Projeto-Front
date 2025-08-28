@@ -1,7 +1,8 @@
- // Filtro funcional para mostrar apenas não lidas + pesquisa por texto
+// Filtro funcional para mostrar apenas não lidas + pesquisa por texto
     document.addEventListener('DOMContentLoaded', function() {
         const btn = document.querySelector('.btn-filter');
         const searchInput = document.querySelector('.search-box input');
+        const btnBack = document.getElementById('btn-back');
         let showingUnread = false;
 
         function filterNotifications() {
@@ -28,6 +29,18 @@
             showingUnread = !showingUnread;
             btn.textContent = showingUnread ? 'Mostrar todas' : 'Mostrar apenas as não lidas';
             filterNotifications();
+            // A seta deve ficar sempre visível
+            btnBack.style.display = '';
         });
         searchInput.addEventListener('input', filterNotifications);
+        // Seta de voltar: volta para todas as notificações
+        btnBack.addEventListener('click', function() {
+            if (showingUnread) {
+                showingUnread = false;
+                btn.textContent = 'Mostrar apenas as não lidas';
+                filterNotifications();
+            }
+            // A seta continua visível sempre
+            btnBack.style.display = '';
+        });
     });
