@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-primaria: #005691;
+    --font-noto: "Noto Sans Arabic", sans-serif;
+}
+
+body {
+    background: #f4f8fb;
+    font-family: var(--font-noto), Arial, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 100vw;
+    margin: 0;
+    background: #fff;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    padding-bottom: 2rem;
+    /* Reduzir padding lateral para aumentar área útil */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.titulo-notificacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0 2rem;
+    /* border-bottom: 1px solid #e3eaf2; */
+    background: #fff;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 0.5rem;
+}
+
+.icon-back {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 38px;
+    max-width: 120px;
+}
+
+.title {
+    text-align: center;
+    margin: 2rem 0 1.5rem 0;
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    font-family: var(--font-noto);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 0 1.2rem 0;
+    padding: 1rem 0 0.5rem 0;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+
+.search-box input{
+    width: 100%;
+    max-width: 420px;
+    border-radius: 32px;
+    border: 1.5px solid #e3eaf2;
+    background: #f7fafd;
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+    color: #005691;
+    box-shadow: none;
+    margin: 0 0 0.7rem 0;
+    display: block;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+.search-box input:focus {
+    outline: none;
+    border: 1.5px solid var(--cor-primaria);
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0 0 1.2rem 0;
+    padding: 0;
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+
+.filter p {
+    color: #005691;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.btn-filter {
+    background-color: #e1ecf7;
+    color: var(--cor-primaria);
+    border: none;
+    border-radius: 24px;
+    padding: 0.5rem 1.7rem;
+    font-size: 0.95rem;
+    font-family: var(--font-noto);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 1px 4px rgba(0,86,145,0.04);
+    width: 100%;
+    max-width: 420px;
+    margin: 0 0 0.7rem 0;
+    display: block;
+}
+
+.btn-filter:hover {
+    background: #cce2f4;
+    color: #003a5c;
+}
+
+/* RESET TOTAL: Remove centralização, largura fixa, espaçamento extra, borda arredondada e fundo azul das notificações. Volta ao layout compacto e alinhado à esquerda, como no início. */
+.notification-section {
+    display: block;
+    align-items: unset;
+}
+
+.notification {
+    width: 96%;
+    max-width: 600px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.7rem;
+    border-radius: 12px;
+    background: transparent;
+    box-shadow: none;
+    padding: 1.2rem 1.2rem !important;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    border-bottom: 1px solid #e3eaf2;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.notification:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.notification-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.notification-info h3 {
+    color: var(--cor-primaria);
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+    white-space: normal; /* Permite quebra de linha para melhor leitura no mobile */
+    overflow: visible;
+    text-overflow: unset;
+    text-align: left;
+}
+
+.notification-info p {
+    color: #023a67;
+    font-size: 0.97rem;
+    margin-bottom: 0.1rem;
+    white-space: normal; /* Permite quebra de linha para melhor leitura no mobile */
+    overflow: visible;
+    text-overflow: unset;
+    text-align: left;
+}
+
+.notification-info span {
+    font-size: 0.85rem;
+    color: #888;
+    margin-right: 0.5rem;
+}
+
+.notification-info .notification-meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.2rem;
+    gap: 0;
+}
+
+.notification-info .notification-meta span:first-child {
+    margin-right: 0;
+}
+
+.status {
+    color: #009688;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-left: 0.2rem;
+}
+
+/* Remove barra azul escura e ajuste para mobile */
+.notification.unread {
+    background: #f7fbff; /* tom mais claro, sem azul escuro */
+    border-left: none; /* Remove barra azul escura */
+}
+
+.icon-bell {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 600px) {
+    .notification {
+        width: 96%;
+        max-width: 99vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem 1rem !important;
+        font-size: 1rem;
+        border-radius: 12px;
+        gap: 0.7rem;
+        box-sizing: border-box;
+    }
+    .notification-info h3 {
+        font-size: 1rem;
+    }
+    .notification-info p {
+        font-size: 0.95rem;
+    }
+    .btn-filter, .search-box input {
+        width: 95vw;
+        max-width: 95vw;
+        margin-left: 0;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .notification-info h3, .notification-info p {
+        font-size: 1rem;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+    }
+    .notification {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        padding: 0.7rem 0.7rem 0.7rem 0.7rem !important;
+    }
+    .notification-info span {
+        display: inline-block;
+        margin-top: 0.2rem;
+    }
+    .search-box, .filter {
+        max-width: 95vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+    .search-box input, .btn-filter {
+        width: 100%;
+        margin: 0 0 0.7rem 0;
+    }
+    .notification-info .notification-meta {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .notification {
+        width: 94vw;
+        max-width: 97vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.1rem 1.1rem !important;
+        font-size: 0.97rem;
+        min-height: 70px;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+    .notification-info h3 {
+        font-size: 0.93rem;
+    }
+    .notification-info p {
+        font-size: 0.89rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .notification {
+        width: 99%;
+        padding: 0.4rem 0.4rem 0.4rem 0.4rem !important;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .notification, .unread {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.7rem 1rem !important;
+        background: #f7fbff;
+        border-radius: 10px;
+        box-shadow: none;
+        gap: 0.3rem;
+        margin-bottom: 1rem !important;
+    }
+    .notification-info h3, .notification-info p {
+        text-align: left;
+        font-size: 0.97rem;
+    }
+    .notification-section {
+        padding: 1rem !important;
+    }
+    .search-box input, .btn-filter {
+        width: 98vw;
+        max-width: 98vw;
+        margin-left: 0;
+    }
+}
+
+.notification-section:first-of-type {
+    border-top: none;
+}
+
+.notification-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notification {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .notification-section {
+        align-items: stretch;
+    }
+    .notification {
+        width: 99%;
+        min-width: 0;
+    }
+}
+
+.notification-section h2 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin: 2.2rem 0 0.7rem 0.7rem;
+    letter-spacing: 0.2px;
+}
+
+.notification h3{
+    color: var(--cor-primaria);
+    font-family: var(--font-noto);  
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.notification p{
+    color: #023A67;
+}
+
+/* Espaçamento entre filtros e busca */
+.dias h2{
+    color : var(--cor-primaria);
+}
+
+.dias-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin: 0.1rem 0 0.05rem 0;
+    letter-spacing: 0.1px;
+    font-family: var(--font-noto);
+    text-align: left;
+}
+
+/* Estilo responsivo para telas menores */
+@media screen and (max-width: 480px) {
+    .search-box input {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .notification {
+        width: 90%;
+    }
+
+    .btn-filter {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .notification-section {
+        padding: 0 1rem;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100vw;
+        min-width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
+        padding-bottom: 2rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .notification-section {
+        margin-top: 0.05rem;
+        padding: 0 0.05rem;
+    }
+    .dias-titulo {
+        margin: 0.1rem 0 0.05rem 0;
+        font-size: 1rem;
+    }
+    .notification {
+        max-width: 98vw;
+        padding: 0.7rem 0.7rem 0.7rem 0.7rem !important;
+        font-size: 1.01rem;
+        width: 99%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.05rem;
+        box-sizing: border-box;
+        border-radius: 12px 0 0 12px;
+        border-left-width: 4px;
+        gap: 0.8rem;
+    }
+    .notification-info h3 {
+        font-size: 1.07rem;
+    }
+    .notification-info p {
+        font-size: 0.98rem;
+    }
+    .notification:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .search-box input {
+        max-width: 140px;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+    }
+    .notification {
+        max-width: 99vw;
+        padding: 0.5rem 0.3rem 0.5rem 0.3rem !important;
+        font-size: 0.97rem;
+        min-height: 70px;
+    }
+    .notification-info h3 {
+        font-size: 0.99rem;
+    }
+    .notification-info p {
+        font-size: 0.93rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        max-width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+        padding-bottom: 2rem;
+    }
+    .header {
+        padding: 1rem 1rem 0 1rem;
+        border-radius: 0;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .search-box input {
+        max-width: 100vw;
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+    .notification {
+        width: 99%;
+        padding: 0.7rem 0.2rem 0.7rem 0.5rem;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .container {
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 100vw;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .notification {
+        width: 97%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .search-box, .filter {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-box input, .btn-filter {
+        width: 100%;
+        margin: 0 0 0.7rem 0;
+    }
+}
+
+.divider-section {
+    border: none;
+    border-top: 2px solid #e3eaf2;
+    margin: 1.2rem 0 1.2rem 0;
+    width: 100%;
+}
